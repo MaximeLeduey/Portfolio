@@ -1,17 +1,47 @@
-/* Error: Undefined variable.
- *   ,
- * 7 |     background-color: $neutral-100;
- *   |                       ^^^^^^^^^^^^
- *   '
- *   assets\scss\input.scss 7:23  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 7 \2502      background-color: $neutral-100;\d\a   \2502                        ^^^^^^^^^^^^\a   \2575 \a   assets\\scss\\input.scss 7:23  root stylesheet";
+* {
+  margin: 0;
+  padding: 0;
 }
+
+.header {
+  height: 100px;
+  background-color: #F7F5FF;
+  padding: 0 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_burger_container {
+  height: 11.6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.header_burger_line-1 {
+  height: 2.17px;
+  width: 36.25px;
+  background-color: #191980;
+}
+.header_burger_line-2 {
+  height: 2.17px;
+  width: 25.38px;
+  background-color: #60D773;
+}
+
+.hero {
+  padding: 0 10vw;
+  font-family: "Chivo";
+  background-color: #4747B2;
+}
+.hero_display {
+  font-size: 27.6px;
+  color: #F7F5FF;
+}
+.hero_name {
+  font-size: 39.8px;
+  color: #60D773;
+  font-weight: 800;
+}
+
+/*# sourceMappingURL=output.css.map */
