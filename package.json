@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "portfolio": "sass --watch ./assets/scss/input.scss:./assets/css/output.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaximeLeduey/Portfolio.git"
+  },
+  "author": "maxime",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaximeLeduey/Portfolio/issues"
+  },
+  "homepage": "https://github.com/MaximeLeduey/Portfolio#readme"
+}
