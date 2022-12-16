@@ -7,6 +7,22 @@
     padding: 0;
 }
 
+// styles généraux ( atomes ) 
+
+button {
+    width: 250px;
+    height: 53px;
+    border-radius: 5px;
+    border: 1px solid $green-300;
+    color: $green-300;
+    font-size: $heading-5;
+    font-weight: bold;
+    font-family: $font-1;
+    background-color: transparent;
+}
+
+
+
 // styles du header
 
 .header {
@@ -39,12 +55,19 @@
 
 
 .hero {
-    padding: 0 10vw;
+    padding: 50px 10vw;
     font-family: $font-1;
+    height: 695px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+    align-items: center;
     background-color: $primary-500;
     &_display {
         font-size: $heading-3;
-        color: $neutral-100
+        color: $neutral-100;
+        max-width: 300px;
     }
     &_name {
         font-size: $heading-1;

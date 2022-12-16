@@ -3,6 +3,18 @@
   padding: 0;
 }
 
+button {
+  width: 250px;
+  height: 53px;
+  border-radius: 5px;
+  border: 1px solid #60D773;
+  color: #60D773;
+  font-size: 19.2px;
+  font-weight: bold;
+  font-family: "Chivo";
+  background-color: transparent;
+}
+
 .header {
   height: 100px;
   background-color: #F7F5FF;
@@ -30,13 +42,20 @@
 }
 
 .hero {
-  padding: 0 10vw;
+  padding: 50px 10vw;
   font-family: "Chivo";
+  height: 695px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 50px;
+  align-items: center;
   background-color: #4747B2;
 }
 .hero_display {
   font-size: 27.6px;
   color: #F7F5FF;
+  max-width: 300px;
 }
 .hero_name {
   font-size: 39.8px;
