@@ -7,26 +7,29 @@ button {
   width: 250px;
   height: 53px;
   border-radius: 5px;
-  border: 1px solid #60D773;
-  color: #60D773;
   font-size: 19.2px;
   font-weight: bold;
   font-family: "Chivo";
-  background-color: transparent;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover, button:active {
+.btn-primary, .btn-secondary:hover {
+  border: 1px solid #60D773;
+  color: #60D773;
+  background-color: transparent;
+}
+
+.btn-primary:hover, .button:active, .btn-secondary {
   border: none;
 }
 
-button:hover {
+.btn-primary:hover, .btn-secondary {
   background-color: #60D773;
-  color: white;
+  color: #F7F5FF;
 }
 
-button:active {
+.btn-primary:active, .btn-secondary:active {
   background-color: #F7F5FF;
   color: #60D773;
 }
@@ -142,6 +145,23 @@ p {
   justify-content: flex-start;
   gap: 15px;
   align-items: center;
+}
+
+.projects {
+  padding: 50px 10vw;
+  background-color: #F7F5FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 50px;
+  align-items: center;
+}
+.projects_title {
+  color: #191980;
+}
+.projects_item {
+  width: 321px;
+  height: 300px;
 }
 
 /*# sourceMappingURL=output.css.map */
