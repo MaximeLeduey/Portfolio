@@ -50,15 +50,13 @@ p {
     font-family: $font-2;
 }
 
-.skill_item {
-    padding: 10px 23px;
-    background-color: rgba(0,0,0,0.5);
-    color: $neutral-100;
-    font-weight: 600;
-    border-radius: 5px;
-    filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.25));
-    font-family: 'Montserrat';
-    font-size: 12px;
+.hero, .about, .skills, .projects {
+    padding: 50px 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+    align-items: center;
 }
 
 
@@ -95,14 +93,8 @@ p {
 
 
 .hero {
-    padding: 50px 10vw;
     font-family: $font-1;
     height: 644px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 50px;
-    align-items: center;
     background-color: $primary-500;
     &_display {
         font-size: $heading-3;
@@ -120,13 +112,7 @@ p {
 
 .about {
     height: 463px;
-    padding: 50px 10vw;
     background-color: $neutral-100;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 50px;
     &_title {
         color: $primary-700;
     }
@@ -140,13 +126,7 @@ p {
 // styles de la section skills
 
 .skills {
-    padding: 50px 10vw;
     background-color: $primary-700;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 50px;
-    align-items: center;
     &_title {
         color: $neutral-100;
     }
@@ -164,16 +144,21 @@ p {
     }
 }
 
+.skill_item {
+    padding: 10px 23px;
+    background-color: rgba(0,0,0,0.5);
+    color: $neutral-100;
+    font-weight: 600;
+    border-radius: 5px;
+    filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.25));
+    font-family: 'Montserrat';
+    font-size: 12px;
+}
+
 // styles de la section projets
 
 .projects {
-    padding: 50px 10vw;
     background-color: $neutral-100;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 50px;
-    align-items: center;
     &_title {
         color: $primary-700;
     }
@@ -207,16 +192,18 @@ p {
         height: 169px;
         position: relative;
         &_image-1 {
+            --image1Height: 96px;
             width: 198px;
-            height: 96px;
+            height: var(--image1Height);
             position: absolute;
-            top: calc(50% - 48px);
+            top: calc(50% - var(--image1Height) / 2);
         }
         &_image-2 {
+            --image2Height: 140px;
             width: 64px;
-            height : 140px;
+            height : var(--image2Height);
             position: absolute;
-            top: calc(50% - 70px);
+            top: calc(50% - var(--image2Height) / 2);
             right: 0px;
         }
     }
