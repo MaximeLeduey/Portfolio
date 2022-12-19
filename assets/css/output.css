@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 button {
@@ -20,7 +21,7 @@ button {
   background-color: transparent;
 }
 
-.btn-primary:hover, button:active, .btn-secondary {
+.btn-primary:hover, .btn-secondary:active, .btn-secondary {
   border: none;
 }
 
@@ -44,7 +45,7 @@ p {
   font-family: "Montserrat";
 }
 
-.hero, .about, .skills, .projects {
+.hero, .about, .skills {
   padding: 50px 10vw;
   display: flex;
   flex-direction: column;
@@ -140,9 +141,25 @@ p {
 
 .projects {
   background-color: #F7F5FF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
 }
 .projects_title {
   color: #191980;
+}
+.projects_slider {
+  width: 321px;
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+}
+.projects_slider::-webkit-scrollbar {
+  width: 0;
 }
 .projects_item {
   width: 321px;
