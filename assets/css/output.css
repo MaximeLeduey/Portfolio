@@ -155,7 +155,6 @@ p {
 .projects_slider {
   width: 321px;
   display: flex;
-  justify-content: space-between;
   overflow: auto;
 }
 .projects_slider::-webkit-scrollbar {
