@@ -51,7 +51,7 @@ p {
     font-family: $font-2;
 }
 
-.hero, .about, .skills {
+.hero, .about, .skills, .contact {
     padding: 50px 10vw;
     display: flex;
     flex-direction: column;
@@ -95,7 +95,7 @@ p {
 
 .hero {
     font-family: $font-1;
-    height: 644px;
+    height: auto;
     background-color: $primary-500;
     &_display {
         font-size: $heading-3;
@@ -222,6 +222,54 @@ p {
             position: absolute;
             top: calc(50% - var(--image2Height) / 2);
             right: 0px;
+        }
+    }
+}
+
+// styles de la section contacts
+
+.contact {
+    background-color: $primary-300;
+    gap: 40px;
+    &_title {
+        color: $neutral-100;
+    }
+    &_email {
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: flex;
+        background-color: $primary-100;
+        justify-content: flex-start;
+        gap: 23px;
+        align-items: center;
+        filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.25));
+        &_icon {
+            width: 24px;
+            height: 24px;
+        }
+        p {
+            font-family: $font-2;
+            font-size: 12px;
+            font-weight: 600;
+            color: $neutral-900;
+        }
+    }
+    &_socials {
+        border-radius: 5px;
+        display: flex;
+        padding: 10px 30px;
+        background-color: rgba(0,0,0,0.5);
+        justify-content: flex-start;
+        gap: 50px;
+        align-items: center;
+        filter: drop-shadow(2px 6px 6px rgba(0,0,0,0.5));
+        &_instagram, &_linkedin {
+            width: 24px;
+            height: 24px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
