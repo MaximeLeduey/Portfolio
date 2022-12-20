@@ -5,10 +5,11 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    // box-sizing: border-box;
 }
 
 // styles généraux 
+
 
 button {
     width: 250px;
@@ -171,15 +172,20 @@ p {
         color: $primary-700;
     }
     &_slider {
-        width: 321px;
-        display: flex;
-        overflow: auto;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 321px;
+        overflow-x: scroll;
+        gap: 50px;
+        margin-left: 10vw;
+        width: 100vw;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: inline mandatory;
     }
-    &_slider::-webkit-scrollbar {
-        width: 0;
-    }
+    // &_slider::-webkit-scrollbar {
+    //     width: 0;
+    // }
     &_item {
-        width: 321px;
         height: 270px;
         background-image: url(../img/card_background.png);
         background-size: cover;
@@ -187,6 +193,7 @@ p {
         flex-direction: column;
         align-items: center;
         padding-top: 30px;
+        scroll-snap-align: start;
         button {
             width: 187px;
             height: 43px;
