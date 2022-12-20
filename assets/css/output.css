@@ -162,6 +162,9 @@ p {
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
 }
+.projects_slider::-webkit-scrollbar {
+  width: 0;
+}
 .projects_item {
   height: 270px;
   background-image: url(../img/card_background.png);

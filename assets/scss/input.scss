@@ -182,9 +182,9 @@ p {
         overscroll-behavior-inline: contain;
         scroll-snap-type: inline mandatory;
     }
-    // &_slider::-webkit-scrollbar {
-    //     width: 0;
-    // }
+    &_slider::-webkit-scrollbar {
+        width: 0;
+    }
     &_item {
         height: 270px;
         background-image: url(../img/card_background.png);
