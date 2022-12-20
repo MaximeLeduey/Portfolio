@@ -4,32 +4,26 @@
 const slider = document.querySelector('.projects_slider');
 let activeItemNbr = 1;
 
-function addClass() {
-    const itemToSelect = `.projects .item-${activeItemNbr}`;
-    const currentItemActive = document.querySelector(itemToSelect);
-    currentItemActive.classList.add('active');
-}
-
-function removeClass() {
-    const itemToSelect = `.projects .item-${activeItemNbr}`;
-    const currentItemActive = document.querySelector(itemToSelect);
-    currentItemActive.classList.remove('active');
-}
-
-slider.addEventListener('mouseup', () => {
+slider.addEventListener('touchend', () => {
     if(slider.scrollLeft > 600) {
         activeItemNbr = 3;
-        addClass();
     }
     else if(slider.scrollLeft > 300) {
         activeItemNbr = 2;
-        addClass();
     }
     else {
         activeItemNbr = 1;
-        addClass();
     }
-    // console.log(slider.scrollLeft)
+    const items = document.querySelectorAll('.projects_item');
+    items.forEach(item => {
+        if(item.classList.contains(`item-${activeItemNbr}`)) {
+            item.classList.add('active');
+        }
+        else {
+            item.classList.remove('active');
+        }
+    })
+    
 })
 
-addClass();
+

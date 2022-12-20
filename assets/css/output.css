@@ -165,6 +165,9 @@ p {
 .projects_slider::-webkit-scrollbar {
   width: 0;
 }
+.projects .active {
+  transform: scale(1);
+}
 .projects_item {
   height: 270px;
   background-image: url(../img/card_background.png);
@@ -174,6 +177,8 @@ p {
   align-items: center;
   padding-top: 30px;
   scroll-snap-align: start;
+  transform: scale(0.8);
+  transition: transform(scale) 1s;
 }
 .projects_item button {
   width: 187px;
