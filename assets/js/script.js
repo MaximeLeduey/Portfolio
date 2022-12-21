@@ -4,6 +4,7 @@
 const slider = document.querySelector('.projects_slider');
 let activeItemNbr = 1;
 
+
 slider.addEventListener('touchmove', () => {
     if(slider.scrollLeft < 250) {
         activeItemNbr = 1;
@@ -28,4 +29,7 @@ slider.addEventListener('touchmove', () => {
     // console.log(slider.scrollLeft);
 })
 
+slider.addEventListener('scrollend', () => {
+    console.log('event')
+})
 
