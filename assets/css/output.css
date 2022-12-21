@@ -160,13 +160,9 @@ p {
   margin-left: 10vw;
   width: 100vw;
   overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
 }
 .projects_slider::-webkit-scrollbar {
   width: 0;
-}
-.projects .active {
-  transform: scale(1);
 }
 .projects_item {
   height: 270px;
@@ -176,7 +172,6 @@ p {
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
-  scroll-snap-align: start;
   transform: scale(0.8);
   transition: transform(scale) 1s;
 }
@@ -194,6 +189,32 @@ p {
   font-family: "Montserrat";
   font-size: 14px;
   color: #636266;
+}
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+.projects .active {
+  animation: scaleUp 1s forwards;
+}
+.projects .inactive {
+  animation: scaleDown 1s forwards;
 }
 .projects_item_img_container {
   width: 252px;
