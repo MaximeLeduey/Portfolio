@@ -13,13 +13,33 @@
         <div class="header_logo_container">
             <img src="/assets/img/logo.svg" alt="logo" class="header_logo">
         </div>
-        <div class="header_burger_container">
-            <div class="header_burger_line-1"></div>
-            <div class="header_burger_line-2"></div>
-        </div>
+        <nav class="header_nav">
+            <ul class="header_nav_menu">
+                <li class="header_nav_menu_item">
+                    <a href="#hero">Accueil</a>
+                </li>
+                <li class="header_nav_menu_item">
+                    <a href="#about">A propos de moi</a>
+                </li>
+                <li class="header_nav_menu_item">
+                    <a href="#skills">Mes compétences</a>
+                </li>
+                <li class="header_nav_menu_item">
+                    <a href="#projects">Mes projets</a>
+                </li>
+                <li class="header_nav_menu_item">
+                    <a href="#contact">Me contacter</a>
+                </li>
+            </ul>
+            <div class="header_nav_burger_container">
+                <div class="header_nav_burger_line-1"></div>
+                <div class="header_nav_burger_line-2"></div>
+            </div>
+        </nav>
+     
     </header>
     <main>
-        <section class="hero">
+        <section class="hero" id="hero">
             <h1 class="hero_display">Bonjour, je suis <span class="hero_name">MAXIME LEDUEY</span> développeur web</h1>
             <div class="hero_img_container">
                 <img src="/assets/img/hero.png" alt="photo de moi" class="hero_img">
@@ -33,7 +53,7 @@
                  puis j’ai décidé de m’inscrire dans une école. 
                  Je suis donc désormais étudiant en 2 ème année en bachelor développement web/application à La Manu au Havre. </p>
         </section>
-        <section class="skills">
+        <section class="skills" id="skills">
             <h2 class="skills_title heading-2">COMPETENCES</h2>
             <div class="skills_list">
                 <div class="skills_column-1">
@@ -54,7 +74,7 @@
                 </div>
             </div>
         </section>
-        <section class="projects">
+        <section class="projects" id="projects">
             <h2 class="projects_title heading-2">PROJETS</h2>
             <div class="projects_slider">
                 <div class="projects_item item-1 active">
@@ -86,7 +106,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <h2 class="contact_title heading-2">CONTACTEZ-MOI</h2>
             <div class="contact_email">
                 <div class="contact_email_icon" alt="icone email">
