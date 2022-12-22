@@ -46,10 +46,12 @@ let isOpened = false;
 burger.addEventListener('pointerdown', () => {
     if(!isOpened) {
         menu.classList.add('active');
+        burger.classList.add('active');
         isOpened = true;
     }
     else {
         menu.classList.remove('active');
+        burger.classList.remove('active');
         isOpened = false;
     }
 })
