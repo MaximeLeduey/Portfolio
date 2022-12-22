@@ -66,12 +66,32 @@ p {
 // styles du header
 
 .header {
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 80vw;
     height: 100px;
     background-color: $neutral-100;
     padding: 0 10vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &_background {
+        display: none;
+        width: 100vw;
+        height: 100px;
+        background-color: $neutral-100;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+    @media (max-width: 1000px) {
+        &_background {
+            display: block;
+        }
+       
+    }
     &_logo_container {
         z-index: 3;
     }
@@ -164,6 +184,7 @@ p {
 
 
 .hero {
+    // margin-top: 100px;
     font-family: $font-1;
     height: auto;
     background-color: $primary-500;

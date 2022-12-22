@@ -61,6 +61,21 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+.header_background {
+  display: none;
+  width: 100vw;
+  height: 100px;
+  background-color: #F7F5FF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+@media (max-width: 1000px) {
+  .header_background {
+    display: block;
+  }
+}
 .header_logo_container {
   z-index: 3;
 }

@@ -29,9 +29,7 @@ slider.addEventListener('scroll', () => {
     // console.log(slider.scrollLeft);
 })
 
-slider.addEventListener('scrollend', () => {
-    console.log('event')
-})
+
 
 
 // gestion du burger menu
