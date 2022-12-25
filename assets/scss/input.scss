@@ -52,14 +52,18 @@ p {
     font-family: $font-2;
 }
 
-.hero, .about, .skills, .contact {
+.hero, .about, .skills, .projects, .contact {
     padding: 50px 10vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 50px;
     align-items: center;
+    @media(min-width: $tablet) {
+        padding: 100px 10vw;
+    }
 }
+
 
 
 
@@ -86,7 +90,7 @@ p {
         left: 0;
         z-index: 2;
     }
-    @media (max-width: 1000px) {
+    @media (max-width: $desktop) {
         &_background {
             display: block;
         }
@@ -125,7 +129,7 @@ p {
             gap: 11px;
             z-index: 3;
         }
-        @media (max-width: 1000px) {
+        @media (max-width: $desktop) {
             &_menu {
                 background-color: $neutral-100;
                 width: 100vw;
@@ -198,12 +202,21 @@ p {
         color: $green-300;
         font-weight: 800;
     }
+    @media(min-width: $tablet) {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0;
+        button {
+            margin-top: -54px;
+        }
+    }
 }
 
 // styles de la section about
 
 .about {
-    height: 463px;
     background-color: $neutral-100;
     &_title {
         color: $primary-700;
@@ -245,14 +258,19 @@ p {
     filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.25));
     font-family: 'Montserrat';
     font-size: 12px;
+    @media(min-width: $tablet) {
+        padding: 10px 40px;
+    }
 }
+
+
 
 // styles de la section projets
 
 .projects {
     background-color: $neutral-100;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-left: 0;
+    padding-right: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -264,10 +282,9 @@ p {
     &_slider {
         display: grid;
         grid-auto-flow: column;
-        grid-auto-columns: 321px;
+        grid-auto-columns: auto;
         overflow-x: scroll;
         gap: 50px;
-        margin-left: 10vw;
         width: 100vw;
         overscroll-behavior-inline: contain;
         // scroll-snap-type: x mandatory;
@@ -277,6 +294,7 @@ p {
     }
     &_item {
         height: 270px;
+        width: 321px;
         background-image: url(../img/card_background.png);
         background-size: cover;
         display: flex;
@@ -285,7 +303,8 @@ p {
         padding-top: 30px;
         // scroll-snap-align: center;
         transform: scale(0.8);
-        transition: transform(scale) 1s;
+        opacity: 0.5;
+        transition: 1s;
         button {
             width: 187px;
             height: 43px;
@@ -302,51 +321,56 @@ p {
             color: $neutral-900;
         }
     }
-    @keyframes scaleUp {
-        from {
-            transform: scale(0.8);
-            opacity: 0.5;
-        }
-        to {
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
-    @keyframes scaleDown {
-        from {
-            transform: scale(1);
-            opacity: 1;
-        }
-        to {
-            transform: scale(0.8);
-            opacity: 0.5;
-        }
-    }
     .active {
-        animation: scaleUp 1s forwards;
+        transform: scale(1);
+        opacity: 1;
     }
-    .inactive {
-        animation: scaleDown 1s forwards;
+    --image1Height: 96px;
+    --image2Height: 140px;
+    @media(min-width: $tablet) {
+        --image1Height: 126px;
+        --image2Height: 183px;
     }
     &_item_img_container {
         width: 252px;
         height: 169px;
         position: relative;
-        &_image-1 {
-            --image1Height: 96px;
+        &_image-1 { 
             width: 198px;
             height: var(--image1Height);
             position: absolute;
             top: calc(50% - var(--image1Height) / 2);
         }
         &_image-2 {
-            --image2Height: 140px;
             width: 64px;
             height : var(--image2Height);
             position: absolute;
             top: calc(50% - var(--image2Height) / 2);
             right: 0px;
         }
+    }
+    @media(min-width: $tablet) {
+        &_item {
+            height: 356px;
+            width: 423px;
+            padding-top: 40px;
+            button {
+                width: 246px;
+                height: 57px;
+            }
+        }
+        &_item_img_container {
+            width: 332px;
+            height: 222px;
+            &_image-1 {
+                width: 261px;
+            }
+            &_image-2 {
+                width: 85px;
+            }
+        }
+       
+
     }
 }
 

@@ -14,20 +14,21 @@ slider.addEventListener('scroll', () => {
     }
     else {
         activeItemNbr = 3;
+        slider.removeEventListener('scroll', () => {
+            console.log('remove');
+        }, true)
     }
     const items = document.querySelectorAll('.projects_item');
     items.forEach(item => {
         if(item.classList.contains(`item-${activeItemNbr}`)) {
-            item.classList.remove('inactive');
             item.classList.add('active');
         }
         else {
             item.classList.remove('active');
-            item.classList.add('inactive');
         }
     })
-    // console.log(slider.scrollLeft);
-})
+    console.log(slider.scrollLeft);
+}, true)
 
 
 
@@ -45,11 +46,13 @@ burger.addEventListener('pointerdown', () => {
     if(!isOpened) {
         menu.classList.add('active');
         burger.classList.add('active');
+        document.body.style.overflow = "hidden";
         isOpened = true;
     }
     else {
         menu.classList.remove('active');
         burger.classList.remove('active');
+        document.body.style.overflow = "auto";
         isOpened = false;
     }
 })
