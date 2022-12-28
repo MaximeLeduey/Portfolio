@@ -52,7 +52,7 @@ p {
     font-family: $font-2;
 }
 
-.hero, .about, .skills, .projects, .contact {
+.hero, .about, .skills, .contact {
     padding: 50px 10vw;
     display: flex;
     flex-direction: column;
@@ -188,7 +188,6 @@ p {
 
 
 .hero {
-    // margin-top: 100px;
     font-family: $font-1;
     height: auto;
     background-color: $primary-500;
@@ -276,31 +275,28 @@ p {
 
 .projects {
     background-color: $neutral-100;
-    gap: 50px;
+    padding: 50px 0;
     &_title {
         color: $primary-700;
+        text-align: center;
     }
-    --sliderWidth: 320px;
-    &_container {
-        width: var(--sliderWidth);
-        overflow-x: hidden;
-    }
+    --itemWidth: 320px;
     &_slider {
-        display: flex;
-        position: relative;
-        top: 0px;
-        left: 0px;
-        width: calc(var(--sliderWidth) * 5);
-        overflow-x: hidden;
+        margin-top: 50px;
+        margin-left: 10vw;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: var(--itemWidth);
+        gap : 20px;
+        overflow-x: auto;
         overscroll-behavior-inline: contain;
-        // scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
     }
     &_slider::-webkit-scrollbar {
         width: 0;
     }
     &_item {
         height: 270px;
-        width: var(--sliderWidth);
         background-image: url(../img/card_background.png);
         background-size: cover;
         position: relative;
@@ -308,10 +304,11 @@ p {
         flex-direction: column;
         align-items: center;
         padding-top: 30px;
-        // scroll-snap-align: center;
-        transform: scale(1);
-        opacity: 1;
-        transition: 1s;
+        scroll-snap-align: start;
+        border-radius: 5px;
+        // transform: scale(1);
+        // opacity: 1;
+        // transition: 1s;
         button {
             width: 187px;
             height: 43px;
@@ -328,15 +325,15 @@ p {
             color: $neutral-900;
         }
     }
-    .active {
-        transform: scale(1);
-        opacity: 1;
-        transition: left 0.2s ease-out;
-    }
+    // .active {
+    //     transform: scale(1);
+    //     opacity: 1;
+    //     transition: left 0.2s ease-out;
+    // }
     --imageHeight: 96px;
-    @media(min-width: $tablet) {
-        --imageHeight: 126px;
-    }
+    // @media(min-width: $tablet) {
+    //     --imageHeight: 126px;
+    // }
     &_item_img_container {
         width: 252px;
         height: 169px;
@@ -349,26 +346,26 @@ p {
             height: var(--imageHeight);
         }
     }
-    @media(min-width: $tablet) {
-        &_item {
-            height: 356px;
-            width: 423px;
-            padding-top: 40px;
-            button {
-                width: 246px;
-                height: 57px;
-            }
-        }
-        &_item_img_container {
-            width: 332px;
-            height: 222px;
-            &_image {
-                width: 261px;
-            }
-        }
+    // @media(min-width: $tablet) {
+    //     &_item {
+    //         height: 356px;
+    //         width: 423px;
+    //         padding-top: 40px;
+    //         button {
+    //             width: 246px;
+    //             height: 57px;
+    //         }
+    //     }
+    //     &_item_img_container {
+    //         width: 332px;
+    //         height: 222px;
+    //         &_image {
+    //             width: 261px;
+    //         }
+    //     }
        
 
-    }
+    // }
 }
 
 // styles de la section contacts
