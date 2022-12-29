@@ -96,16 +96,19 @@ p {
   align-items: center;
 }
 .header_nav_menu_item {
+  height: 30px;
   font-family: "Montserrat";
   font-size: 16px;
-}
-.header_nav_menu_item a {
   text-decoration: none;
   color: #949399;
   transition: 0.7s;
+  cursor: pointer;
 }
-.header_nav_menu_item a:hover {
+.header_nav_menu_item:hover {
   color: #191980;
+}
+.header_nav_menu_item.active {
+  border-bottom: 3px solid #60D773;
 }
 .header_nav_burger_container {
   height: auto;
@@ -135,8 +138,6 @@ p {
   }
   .header_nav_menu_item {
     font-weight: 600;
-  }
-  .header_nav_menu_item a {
     color: #191980;
   }
   .header_nav_menu.active {

@@ -1,8 +1,8 @@
-// smooth scroll
-
-const links = [...document.querySelectorAll('nav a')];
+const links = [...document.querySelectorAll('nav li')];
 
 const sections = [...document.querySelectorAll('section')];
+
+// smooth scroll 
 
 let sectionsPosition;
 
@@ -23,6 +23,26 @@ function addSmoothScroll(e) {
 }
 
 window.addEventListener('resize', calcPosition);
+
+// scrollspy
+
+window.onscroll = () => {
+
+    sections.forEach(section => {
+        let top = window.scrollY;
+        let offset = section.offsetTop - 550;
+        let height = section.offsetHeight;
+        let className = section.getAttribute('class');
+
+        if(top >= offset && top <= offset + height) {
+            links.forEach(link => link.classList.remove('active'));
+            document.getElementById(className).classList.add('active');
+        }
+    })
+
+}
+
+
 
 
 // gestion du burger menu

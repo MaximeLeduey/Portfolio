@@ -109,16 +109,19 @@ p {
             justify-content: space-between;
             align-items: center;
             &_item {
+                height: 30px;
                 font-family: $font-2;
                 font-size: $paragraph-3;
-                a {
-                    text-decoration: none;
-                    color: $neutral-700;
-                    transition: 0.7s;
-                }
-                a:hover {
-                    color: $primary-700;
-                }
+                text-decoration: none;
+                color: $neutral-700;
+                transition: 0.7s;
+                cursor: pointer;
+            }
+            &_item:hover {
+                color: $primary-700;
+            }
+            &_item.active {
+                border-bottom: 3px solid $green-300;
             }
         }
         &_burger_container {
@@ -148,9 +151,7 @@ p {
                 padding: 50px 0;
                 &_item {
                     font-weight: 600;
-                    a {
-                        color: $primary-700;
-                    }
+                    color: $primary-700;
                 }
             }
             &_menu.active {
