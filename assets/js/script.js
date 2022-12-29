@@ -1,3 +1,29 @@
+// smooth scroll
+
+const links = [...document.querySelectorAll('nav a')];
+
+const sections = [...document.querySelectorAll('section')];
+
+let sectionsPosition;
+
+function calcPosition() {
+    sectionsPosition = sections.map(section => (section.offsetTop - 100));
+}
+
+calcPosition();
+
+links.forEach(link => link.addEventListener('click', addSmoothScroll));
+
+function addSmoothScroll(e) {
+    const linkIndex = links.indexOf(e.target);
+    window.scrollTo({
+        top: sectionsPosition[linkIndex],
+        behavior: "smooth"
+    })
+}
+
+window.addEventListener('resize', calcPosition);
+
 
 // gestion du burger menu
 

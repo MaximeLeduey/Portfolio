@@ -63,9 +63,6 @@ p {
     justify-content: flex-start;
     gap: 50px;
     align-items: center;
-    @media(min-width: $tablet) {
-        padding: 100px 10vw;
-    }
 }
 
 
@@ -74,16 +71,17 @@ p {
 // styles du header
 
 .header {
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // width: 80vw;
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 100px;
+    width: 80vw;
     background-color: $neutral-100;
     padding: 0 10vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
     &_background {
         display: none;
         width: 100vw;
@@ -195,6 +193,7 @@ p {
     font-family: $font-1;
     height: auto;
     background-color: $primary-500;
+    margin-top: 100px;
     &_container {
         width: fit-content;
         margin: 0 auto;

@@ -56,19 +56,19 @@ p {
   gap: 50px;
   align-items: center;
 }
-@media (min-width: 768px) {
-  .about, .contact {
-    padding: 100px 10vw;
-  }
-}
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 100px;
+  width: 80vw;
   background-color: #F7F5FF;
   padding: 0 10vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 .header_background {
   display: none;
@@ -170,6 +170,7 @@ p {
   font-family: "Chivo";
   height: auto;
   background-color: #4747B2;
+  margin-top: 100px;
 }
 .hero_container {
   width: fit-content;
