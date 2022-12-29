@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script defer src="assets/js/script.js"></script>
     <title>Maxime Leduey</title>
 </head>
@@ -25,7 +26,7 @@
                     <a href="#about">A propos de moi</a>
                 </li>
                 <li class="header_nav_menu_item">
-                    <a href="#skills">Mes compétences</a>
+                    <a href="#skillss">Mes compétences</a>
                 </li>
                 <li class="header_nav_menu_item">
                     <a href="#projects">Mes projets</a>
@@ -43,11 +44,13 @@
     </header>
     <main>
         <section class="hero" id="hero">
-            <h1 class="hero_display">Bonjour, je suis <span class="hero_name">MAXIME LEDUEY</span> développeur web</h1>
-            <div class="hero_img_container">
-                <img src="/assets/img/hero.png" alt="photo de moi" class="hero_img">
+            <div class="hero_container">
+                <h1 class="hero_display">Bonjour, je suis <span class="hero_name">MAXIME LEDUEY</span> développeur web</h1>
+                <div class="hero_img_container">
+                    <img src="/assets/img/hero.png" alt="photo de moi" class="hero_img">
+                </div>
+                <button class="hero_btn btn-primary">Prendre contact</button>
             </div>
-            <button class="hero_btn btn-primary">Prendre contact</button>
         </section>
         <section class="about">
             <h2 class="about_title heading-2">A PROPOS DE MOI</h2>
@@ -57,30 +60,92 @@
                  Je suis donc désormais étudiant en 2 ème année en bachelor développement web/application à La Manu au Havre. </p>
         </section>
         <section class="skills" id="skills">
-            <h2 class="skills_title heading-2">COMPETENCES</h2>
+            <h2 class="skills_heading heading-2">COMPETENCES</h2>
             <div class="skills_list">
-                <div class="skills_column-1">
-                    <div class="skill_item">HTML</div>
-                    <div class="skill_item">CSS</div>
-                    <div class="skill_item">Sass</div>
-                    <div class="skill_item">Bootstrap</div>
-                    <div class="skill_item">Javascript</div>
-                    <div class="skill_item">VueJs</div>
+                <div class="skills_group">
+                    <div class="skills_item">
+                        <p class="skills_title">
+                            HTML
+                        </p>
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div class="skills_item">
+                        <p class="skills_title">
+                            CSS
+                        </p>
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <div class="skills_item">
+                        <p class="skills_title">
+                            Sass
+                        </p>
+                        <i class="fa-brands fa-sass"></i>
+                    </div>
+                    <div class="skills_item">
+                        <p class="skills_title">
+                            Bootstrap
+                        </p>
+                        <i class="fa-brands fa-bootstrap"></i>
+                    </div>
                 </div>
-                <div class="skills_column-2">
-                    <div class="skill_item">React</div>
-                    <div class="skill_item">Jquery</div>
-                    <div class="skill_item">PHP</div>
-                    <div class="skill_item">Adobe XD</div>
-                    <div class="skill_item">Figma</div>
-                    <div class="skill_item">WordPress</div>
+                <div class="skills_group">
+                    <div class="skills_item">
+                        <p class="skills_title">
+                            Javascript
+                        </p>
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <div class="skills_item">
+                        <p class="skills_title">
+                            VueJs
+                        </p>
+                        <i class="fa-brands fa-vuejs"></i>
+                    </div>
+                    <div class="skills_item">
+                        <p class="skills_title">
+                            React
+                        </p>
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <div class="skills_item">
+                        <p class="skills_title">
+                            Jquery
+                        </p>
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                </div>
+                <div class="skills_group">
+                    <div class="skills_item">
+                        <p class="skills_title">
+                            PHP
+                        </p>
+                        <i class="fa-brands fa-php"></i>
+                    </div>
+                    <div class="skills_item">
+                        <p class="skills_title">
+                            Adobe XD
+                        </p>
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div class="skills_item">
+                        <p class="skills_title">
+                            Figma
+                        </p>
+                        <i class="fa-brands fa-figma"></i>
+                    </div>
+                    <div class="skills_item">
+                        <p class="skills_title">
+                            Wordpress
+                        </p>
+                        <i class="fa-brands fa-wordpress"></i>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="projects" id="projects">
             <h2 class="projects_title heading-2">PROJETS</h2>
             <div class="projects_slider">
-                <div class="projects_item item-1">
+                <div class="projects_item item-1 active">
                     <p class="projects_item_title">01 - Responsive Web Design</p>
                     <p class="projects_item_subtitle">HTML, Sass, Js, PHP</p>
                     <div class="projects_item_img_container">

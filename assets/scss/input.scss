@@ -10,6 +10,10 @@
 
 // styles généraux 
 
+body {
+    scroll-behavior: smooth;
+}
+
 
 button {
     width: 250px;
@@ -52,7 +56,7 @@ p {
     font-family: $font-2;
 }
 
-.hero, .about, .skills, .contact {
+.about, .contact {
     padding: 50px 10vw;
     display: flex;
     flex-direction: column;
@@ -191,6 +195,16 @@ p {
     font-family: $font-1;
     height: auto;
     background-color: $primary-500;
+    &_container {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 50px;
+    }
     &_display {
         font-size: $heading-3;
         color: $neutral-100;
@@ -200,17 +214,6 @@ p {
         font-size: $heading-1;
         color: $green-300;
         font-weight: 800;
-    }
-    @media(min-width: $tablet) {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        column-gap: 0px;
-        row-gap: 0;
-        button {
-            margin-top: -54px;
-        }
     }
 }
 
@@ -232,42 +235,62 @@ p {
 
 .skills {
     background-color: $primary-700;
-    &_title {
+    padding: 50px 0;
+    &_heading {
+        text-align: center;
+        margin-bottom: 50px;
         color: $neutral-100;
     }
     &_list {
-        width: 85%;
+        margin-left: 10vw;
         display: flex;
-        justify-content: space-between;
-        @media(min-width: $tablet) {
-            width: 60%;
-        }
-        @media(min-width: $desktop) {
-            width: 40%;
-        }
+        gap: 40px;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: x mandatory;
     }
-    &_column-1, &_column-2 {
+    &_list::-webkit-scrollbar {
+        width: 0;
+    }
+    &_group {
+        display: grid;
+        grid-template-columns: 130px 130px;
+        grid-template-rows: 130px 130px;
+        gap: 20px;
+        scroll-snap-align: start;
+    }
+    &_title {
+        color: $neutral-100;
+        text-align: center;
+    }
+    &_item {
+        width: 130px;
+        height: 110px;
+        padding-top: 20px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        gap: 15px;
+        gap: 50px;
         align-items: center;
+        background-color: rgba(0,0,0,0.5);
+        color: $neutral-100;
+        font-weight: 600;
+        border-radius: 5px;
+        filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.25));
+        font-family: 'Montserrat';
+        font-size: 12px;
+        i {
+            transform: scale(3);
+        }
     }
+  
+   
 }
 
-.skill_item {
-    padding: 10px 23px;
-    background-color: rgba(0,0,0,0.5);
-    color: $neutral-100;
-    font-weight: 600;
-    border-radius: 5px;
-    filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.25));
-    font-family: 'Montserrat';
-    font-size: 12px;
-    @media(min-width: $tablet) {
-        padding: 10px 40px;
-    }
-}
+
+  
+
+
 
 
 
@@ -287,7 +310,7 @@ p {
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: var(--itemWidth);
-        gap : 20px;
+        gap : 5vw;
         overflow-x: auto;
         overscroll-behavior-inline: contain;
         scroll-snap-type: x mandatory;
@@ -303,12 +326,11 @@ p {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 30px;
+        padding-top: 25px;
+        padding-bottom: 25px;
         scroll-snap-align: start;
         border-radius: 5px;
-        // transform: scale(1);
-        // opacity: 1;
-        // transition: 1s;
+        gap: 10px;
         button {
             width: 187px;
             height: 43px;
@@ -325,47 +347,17 @@ p {
             color: $neutral-900;
         }
     }
-    // .active {
-    //     transform: scale(1);
-    //     opacity: 1;
-    //     transition: left 0.2s ease-out;
-    // }
-    --imageHeight: 96px;
-    // @media(min-width: $tablet) {
-    //     --imageHeight: 126px;
-    // }
     &_item_img_container {
         width: 252px;
         height: 169px;
-        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         &_image { 
-            width: 198px;
-            height: var(--imageHeight);
+            width: 80%;
+            height: 65%;
         }
     }
-    // @media(min-width: $tablet) {
-    //     &_item {
-    //         height: 356px;
-    //         width: 423px;
-    //         padding-top: 40px;
-    //         button {
-    //             width: 246px;
-    //             height: 57px;
-    //         }
-    //     }
-    //     &_item_img_container {
-    //         width: 332px;
-    //         height: 222px;
-    //         &_image {
-    //             width: 261px;
-    //         }
-    //     }
-       
-
-    // }
 }
 
 // styles de la section contacts
