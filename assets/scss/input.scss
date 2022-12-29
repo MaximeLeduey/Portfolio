@@ -109,19 +109,33 @@ p {
             justify-content: space-between;
             align-items: center;
             &_item {
+                position: relative;
                 height: 30px;
                 font-family: $font-2;
                 font-size: $paragraph-3;
                 text-decoration: none;
                 color: $neutral-700;
-                transition: 0.7s;
+                transition: color 0.3s;
                 cursor: pointer;
+            }
+            &_item::after {
+                content: '';
+                width: 0;
+                height: 3px;
+                background-color: $green-300;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transition: width 0.3s;
+                opacity: 0;
+                border-radius: 5px;
             }
             &_item:hover {
                 color: $primary-700;
             }
-            &_item.active {
-                border-bottom: 3px solid $green-300;
+            &_item.active::after {
+               width: 50px;
+               opacity: 1;
             }
         }
         &_burger_container {
@@ -146,12 +160,18 @@ p {
                 align-items: center;
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
-                transition: 0.5s;
+                transition: 0.3s ease-out;
                 gap: 20px;
                 padding: 50px 0;
                 &_item {
                     font-weight: 600;
                     color: $primary-700;
+                }
+                &_item.active {
+                    color: $green-300;
+                }
+                &_item.active::after {
+                    width: 0;
                 }
             }
             &_menu.active {
