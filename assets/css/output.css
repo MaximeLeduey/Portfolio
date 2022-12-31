@@ -56,6 +56,30 @@ p {
   gap: 50px;
   align-items: center;
 }
+@media (min-width: 1200px) {
+  .about, .contact {
+    padding: 50px 20vw;
+  }
+}
+
+.skills_list::-webkit-scrollbar, .projects_slider::-webkit-scrollbar {
+  height: 15px;
+}
+
+.skills_list::-webkit-scrollbar-track, .projects_slider::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 5px;
+  margin-inline: 80px;
+  padding-inline: 10px;
+}
+
+.skills_list::-webkit-scrollbar-thumb, .projects_slider::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  border: 4px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-radius: 100vw;
+}
 
 .header {
   position: fixed;
@@ -237,14 +261,19 @@ p {
 }
 .skills_list {
   margin-left: 10vw;
+  padding: 15px 0;
   display: flex;
   gap: 40px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   scroll-snap-type: x mandatory;
+  scroll-padding: 20px;
 }
-.skills_list::-webkit-scrollbar {
-  width: 0;
+.skills_list::-webkit-scrollbar-track {
+  border: 1px solid #F7F5FF;
+}
+.skills_list::-webkit-scrollbar-thumb {
+  background-color: #F7F5FF;
 }
 .skills_group {
   display: grid;
@@ -288,6 +317,7 @@ p {
   text-align: center;
 }
 .projects_slider {
+  padding: 15px 0;
   margin-top: 50px;
   margin-left: 10vw;
   display: grid;
@@ -298,8 +328,11 @@ p {
   overscroll-behavior-inline: contain;
   scroll-snap-type: x mandatory;
 }
-.projects_slider::-webkit-scrollbar {
-  width: 0;
+.projects_slider::-webkit-scrollbar-track {
+  border: 1px solid #60D773;
+}
+.projects_slider::-webkit-scrollbar-thumb {
+  background-color: #60D773;
 }
 .projects_item {
   height: 270px;
