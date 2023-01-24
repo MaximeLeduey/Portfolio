@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/MaximeLeduey/Portfolio/issues"
   },
-  "homepage": "https://github.com/MaximeLeduey/Portfolio#readme"
+  "homepage": "https://github.com/MaximeLeduey/Portfolio#readme",
+  "dependencies": {
+    "expo": "^47.0.13",
+    "expo-modules-core": "^1.1.1",
+    "metro-core": "^0.74.0",
+    "stack": "^0.1.0"
+  }
 }
