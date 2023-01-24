@@ -1,0 +1,86 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "01 - App Trombinoscope",
+            "subtitle": "HTML, Sass, Js, PHP",
+            "img": "assets/img/trombinoscope.png"
+        },
+        {
+            "id": 2,
+            "title": "02 - Site Rick et Morty",
+            "subtitle": "React",
+            "img": "assets/img/Screenshot_Single.png"
+        },
+        {
+            "id": 3,
+            "title": "03 - Icon Maker",
+            "subtitle": "HTML, CSS, Js",
+            "img": "assets/img/icone_maker.png"
+        },
+        {
+            "id": 4,
+            "title": "04 - Pokedex",
+            "subtitle": "HTML, CSS, Js, PHP POO",
+            "img": "assets/img/pokedex_search.png"
+        }
+    ],
+    "skills": [
+        {
+            "skill-group-1": [
+                {
+                    "name": "HTML",
+                    "icon": "fa-brands fa-html5"
+                },
+                {
+                    "name": "CSS",
+                    "icon": "fa-brands fa-css3-alt"
+                },
+                {
+                    "name": "Sass",
+                    "icon": "fa-brands fa-sass"
+                },
+                {
+                    "name": "Bootstrap",
+                    "icon": "fa-brands fa-bootstrap"
+                }
+            ],
+            "skill-group-2": [
+                {
+                    "name": "Javascript",
+                    "icon": "fa-brands fa-js"
+                },
+                {
+                    "name": "VueJs",
+                    "icon": "fa-brands fa-vuejs"
+                },
+                {
+                    "name": "React",
+                    "icon": "fa-brands fa-react"
+                },
+                {
+                    "name": "Jquery",
+                    "icon": "fa-brands fa-html5"
+                }
+            ],
+            "skill-group-3": [
+                {
+                    "name": "  PHP",
+                    "icon": "fa-brands fa-php"
+                },
+                {
+                    "name": " Adobe XD",
+                    "icon": "fa-brands fa-html5"
+                },
+                {
+                    "name": "Figma",
+                    "icon": "fa-brands fa-figma"
+                },
+                {
+                    "name": " Wordpress",
+                    "icon": "fa-brands fa-wordpress"
+                }
+            ]
+        }
+    ]
+}

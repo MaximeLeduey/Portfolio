@@ -66,3 +66,39 @@ burger.addEventListener('pointerdown', () => {
         isOpened = false;
     }
 })
+
+
+// gestion des projets
+
+
+const projectsSlider = document.querySelector('.projects_slider');
+
+fetch('../assets/data/data.json')
+.then(response => response.json())
+.then(data => {
+    data.projects.map(project => {
+        const html = `  <div class="projects_item item-1">
+        <p class="projects_item_title">${project.title}</p>
+        <p class="projects_item_subtitle">${project.subtitle}</p>
+        <div class="projects_item_img_container">
+            <img class="projects_item_img_container_image" src="${project.img}" alt="image de projet numero 1">
+        </div>
+        <a href="https://github.com/MaximeLeduey/Trombinoscope"><button class="btn-secondary">Voir le projet</button></a>
+    </div>`;
+        projectsSlider.innerHTML += html;
+    })
+} )
+
+
+// gestion des skills 
+
+const skillsSlider = document.querySelector('.skills_list');
+
+fetch('../assets/data/data.json')
+.then(response => response.json())
+.then(data => {
+    data.skills.map(skillGroup => {
+       
+
+    })
+} )
