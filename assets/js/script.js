@@ -24,6 +24,25 @@ function addSmoothScroll(e) {
 
 window.addEventListener('resize', calcPosition);
 
+const contactBtn1 = document.querySelector('#first');
+
+contactBtn1.addEventListener('click', () => {
+        window.scrollTo({
+            top: sectionsPosition[4],
+            behavior: 'smooth'
+        })
+    })
+
+const contactBtn2 = document.querySelector('#second');
+
+contactBtn2.addEventListener('click', () => {
+        window.scrollTo({
+            top: sectionsPosition[4],
+            behavior: 'smooth'
+        })
+    })
+
+
 // scrollspy
 
 window.onscroll = () => {
@@ -68,7 +87,7 @@ burger.addEventListener('pointerdown', () => {
 })
 
 
-// gestion des projets
+// gestion des projets et des skills
 
 
 const projectsSlider = document.querySelector('.projects_slider');
@@ -77,13 +96,14 @@ fetch('../assets/data/data.json')
 .then(response => response.json())
 .then(data => {
     data.projects.map(project => {
+        const url = "../single.html?id=" + project.id;
         const html = `  <div class="projects_item item-1">
         <p class="projects_item_title">${project.title}</p>
         <p class="projects_item_subtitle">${project.subtitle}</p>
         <div class="projects_item_img_container">
             <img class="projects_item_img_container_image" src="${project.img}" alt="image de projet numero 1">
         </div>
-        <a href="https://github.com/MaximeLeduey/Trombinoscope"><button class="btn-secondary">Voir le projet</button></a>
+        <a href=${url}><button class="btn-secondary">Voir le projet</button></a>
     </div>`;
         projectsSlider.innerHTML += html;
     })
@@ -92,13 +112,25 @@ fetch('../assets/data/data.json')
 
 // gestion des skills 
 
-const skillsSlider = document.querySelector('.skills_list');
+// const skillsSlider = document.querySelector('.skills_list');
 
-fetch('../assets/data/data.json')
-.then(response => response.json())
-.then(data => {
-    data.skills.map(skillGroup => {
-       
-
-    })
-} )
+// fetch('../assets/data/data.json')
+// .then(response => response.json())
+// .then(data => {
+//     data.skills.map(skillGroup => {
+//         console.log(skillGroup[1])
+//         let skillGroupElement = document.createElement('div');
+//         skillGroupElement.classList.add('skill_group');
+//         skillsSlider.appendChild(skillGroupElement);
+        
+//         skillGroup.map(skillItem => {
+//             const html = `<div class="skills_item">
+//             <p class="skills_title">
+//                 ${skillItem.name}
+//             </p>
+//             <i class="${skillItem.icon}"></i>
+//         </div>`;
+//         skillGroupElement.innerHtml += html;
+//         })
+//     })
+// } )

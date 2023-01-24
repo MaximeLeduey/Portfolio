@@ -394,6 +394,7 @@ p {
         // padding: 15px 0;
         margin-top: 50px;
         margin-left: 10vw;
+        padding: 10px 0;
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: var(--itemWidth);
@@ -428,6 +429,8 @@ p {
         padding-bottom: 25px;
         scroll-snap-align: start;
         border-radius: 5px;
+        border-bottom-left-radius: 40px;
+        border-top-right-radius: 40px;
         gap: 10px;
         button {
             width: 187px;
@@ -436,7 +439,7 @@ p {
         &_title {
             color: $neutral-900;
             font-weight: bold;
-            font-size: $heading-6;
+            font-size: $heading-5;
             font-family: $font-1;
         }
         &_subtitle {
@@ -464,6 +467,9 @@ p {
             margin: 0;
             flex-wrap: wrap;
             justify-content: space-around;
+        }
+        &_item {
+            filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.25));
         }
     }
 }
@@ -515,3 +521,7 @@ p {
         }
     }
 }
+
+
+
+// styles de la page single 

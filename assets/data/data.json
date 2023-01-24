@@ -44,7 +44,9 @@
                     "name": "Bootstrap",
                     "icon": "fa-brands fa-bootstrap"
                 }
-            ],
+            ] 
+        },
+        {
             "skill-group-2": [
                 {
                     "name": "Javascript",
@@ -62,7 +64,9 @@
                     "name": "Jquery",
                     "icon": "fa-brands fa-html5"
                 }
-            ],
+            ]
+        },
+        {
             "skill-group-3": [
                 {
                     "name": "  PHP",
@@ -81,6 +85,6 @@
                     "icon": "fa-brands fa-wordpress"
                 }
             ]
-        }
+        }              
     ]
 }
