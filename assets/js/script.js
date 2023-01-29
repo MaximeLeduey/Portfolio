@@ -92,7 +92,7 @@ burger.addEventListener('pointerdown', () => {
 
 const projectsSlider = document.querySelector('.projects_slider');
 
-fetch('../assets/data/data.json')
+fetch('./assets/data/data.json')
 .then(response => response.json())
 .then(data => {
     data.projects.map(project => {
