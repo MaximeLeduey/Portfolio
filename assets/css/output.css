@@ -217,11 +217,11 @@ p {
   }
 }
 .hero_img_container {
-  width: 250px;
+  width: fit-content;
   height: 300px;
 }
 .hero_img_container img {
-  width: 100%;
+  width: auto;
   height: 100%;
   border-radius: 10px;
 }
