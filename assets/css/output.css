@@ -348,7 +348,7 @@ p {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: var(--itemWidth);
-  gap: 15vw;
+  gap: 50px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   scroll-snap-type: x mandatory;
