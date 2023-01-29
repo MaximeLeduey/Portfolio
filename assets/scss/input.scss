@@ -395,7 +395,7 @@ p {
         color: $primary-700;
         text-align: center;
     }
-    --itemWidth: 320px;
+    --itemWidth: 260px;
     &_slider {
         // padding: 15px 0;
        
@@ -405,7 +405,7 @@ p {
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: var(--itemWidth);
-        gap : 1vw;
+        gap : 15vw;
         overflow-x: auto;
         overscroll-behavior-inline: contain;
         scroll-snap-type: x mandatory;
@@ -425,7 +425,7 @@ p {
     &_item {
         transform: scale(0.8);
         height: 250px;
-        width: var(--itemWidth);
+        width: 320px;
         background-image: url(../img/card_background.png);
         background-size: cover;
         position: relative;
