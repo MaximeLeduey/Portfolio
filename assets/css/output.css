@@ -335,7 +335,7 @@ p {
 .projects {
   background-color: #F7F5FF;
   padding: 50px 0;
-  --itemWidth: 320px;
+  --itemWidth: 260px;
 }
 .projects_title {
   color: #191980;
@@ -352,7 +352,6 @@ p {
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   scroll-snap-type: x mandatory;
-  transform: scale(0.8);
 }
 @media (min-width: 768px) {
   .projects_slider {
@@ -363,7 +362,7 @@ p {
   width: 0;
 }
 .projects_item {
-  height: 270px;
+  height: 220px;
   width: var(--itemWidth);
   background-image: url(../img/card_background.png);
   background-size: cover;
@@ -380,8 +379,8 @@ p {
   gap: 10px;
 }
 .projects_item button {
-  width: 187px;
-  height: 43px;
+  width: 150px;
+  height: 35px;
 }
 .projects_item_title {
   color: #636266;
@@ -395,8 +394,8 @@ p {
   color: #636266;
 }
 .projects_item_img_container {
-  width: 252px;
-  height: 169px;
+  width: 200px;
+  height: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
