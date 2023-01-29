@@ -23,6 +23,12 @@
             "title": "04 - Pokedex",
             "subtitle": "HTML, CSS, Js, PHP POO",
             "img": "assets/img/pokedex_search.png"
+        },
+        {
+            "id": 5,
+            "title": "05 - Copie de Netflix",
+            "subtitle": "React Native",
+            "img": "assets/img/netflix.jpg"
         }
     ],
     "skills": [
