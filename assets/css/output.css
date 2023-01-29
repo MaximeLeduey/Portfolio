@@ -362,7 +362,7 @@ p {
   width: 0;
 }
 .projects_item {
-  height: 220px;
+  height: 250px;
   width: var(--itemWidth);
   background-image: url(../img/card_background.png);
   background-size: cover;
