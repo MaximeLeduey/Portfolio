@@ -335,7 +335,7 @@ p {
 .projects {
   background-color: #F7F5FF;
   padding: 50px 0;
-  --itemWidth: 320px;
+  --itemWidth: 260px;
 }
 .projects_title {
   color: #191980;
@@ -356,14 +356,13 @@ p {
 @media (min-width: 768px) {
   .projects_slider {
     margin: 0;
-    transform: scale(0.8);
   }
 }
 .projects_slider::-webkit-scrollbar {
   width: 0;
 }
 .projects_item {
-  height: 270px;
+  height: 220px;
   width: var(--itemWidth);
   background-image: url(../img/card_background.png);
   background-size: cover;
