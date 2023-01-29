@@ -342,14 +342,13 @@ p {
   text-align: center;
 }
 .projects_slider {
-  transform: scale(0.8);
   margin-top: 50px;
   margin-left: 10vw;
   padding: 10px 0;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: var(--itemWidth);
-  gap: 5vw;
+  gap: 1vw;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   scroll-snap-type: x mandatory;
@@ -363,6 +362,7 @@ p {
   width: 0;
 }
 .projects_item {
+  transform: scale(0.8);
   height: 250px;
   width: var(--itemWidth);
   background-image: url(../img/card_background.png);
