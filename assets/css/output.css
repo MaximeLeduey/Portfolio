@@ -335,7 +335,7 @@ p {
 .projects {
   background-color: #F7F5FF;
   padding: 50px 0;
-  --itemWidth: 260px;
+  --itemWidth: 320px;
 }
 .projects_title {
   color: #191980;
@@ -352,6 +352,7 @@ p {
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   scroll-snap-type: x mandatory;
+  transform: scale(0.8);
 }
 @media (min-width: 768px) {
   .projects_slider {
@@ -362,7 +363,7 @@ p {
   width: 0;
 }
 .projects_item {
-  height: 220px;
+  height: 270px;
   width: var(--itemWidth);
   background-image: url(../img/card_background.png);
   background-size: cover;

@@ -395,7 +395,7 @@ p {
         color: $primary-700;
         text-align: center;
     }
-    --itemWidth: 260px;
+    --itemWidth: 320px;
     &_slider {
         // padding: 15px 0;
         margin-top: 50px;
@@ -408,6 +408,7 @@ p {
         overflow-x: auto;
         overscroll-behavior-inline: contain;
         scroll-snap-type: x mandatory;
+        transform: scale(0.8);
         @media(min-width: $tablet) {
             margin: 0;
         }
@@ -422,7 +423,7 @@ p {
     //     background-color: $green-300;
     // }
     &_item {
-        height: 220px;
+        height: 270px;
         width: var(--itemWidth);
         background-image: url(../img/card_background.png);
         background-size: cover;
